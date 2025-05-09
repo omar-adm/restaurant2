@@ -1,0 +1,157 @@
+:root {
+    --primary: #5B6B4A;
+    --accent: #D4B96E;
+    --bg-color: #F5F5F5;
+    --card-bg: #FFFFFF;
+    --text-color: #333333;
+    --font-family: 'Cairo', 'Nunito', sans-serif;
+    --font-weight: 400;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+header {
+    background-color: var(--primary);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.brand {
+    color: var(--accent);
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.main-nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform var(--transition-speed);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.rial {
+    width : 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .brand {
+        font-size: 2rem;
+    }
+
+    .nav-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-text {
+    font-size: 0.9rem;
+    margin: 0;
+}
+.footer-text a {
+    color: var(--accent);
+    text-decoration: none;
+}
+.footer-text a:hover {
+    text-decoration: underline;
+}
