@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="style">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,16 +19,26 @@
 
     <main>
         <nav class="main-nav">
+
+            <!----
             <div class="nav-buttons">
-                <button class="nav-btn active">المشروبات الساخنة</button>
-                <button class="nav-btn">المشروبات الباردة</button>
-                <button class="nav-btn">المخبوزات</button>
+                <button data-tab="hot" class="hot">المشروبات الساخنة</button>
+                <button data-tab="cold" class="cold">المشروبات الباردة</button>
+                <button data-tab="baked" class="baked">المخبوزات</button>
             </div>
+            >---->
+            <ul class="nav-buttons">
+                <li data-tab-target="#hot-products" class="button">المشروبات الساخنة</li>
+                <li data-tab-target="#cold-products" class="button">المشروبات الباردة</li>
+                <li data-tab-target="#baked-products" class="button">المخبوزات</li>
+            </ul>
         </nav>
-        <div class="products-grid">
+
+
+        <div class="products-grid" data-tab-content id="hot-products">
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/tea.jpeg" alt="شاي سيلاني">
+                    <img src="images/teaTest.png" alt="شاي سيلاني">
                 </div>
                 <h3>سيلاني كأس زجاج</h3>
                 <p>شاي احمر سادة</p>
@@ -37,7 +47,7 @@
 
             <div class="product-card">
                 <div class="product-image">
-                    <img src="images/peach.jpeg" alt="شاي سيلاني">
+                    <img src="images/tea.jpeg" alt="شاي سيلاني">
                 </div>
                 <h3>شاي سيلاني كوب</h3>
                 <p>شاي احمر سادة</p>
@@ -53,6 +63,51 @@
                 <div class="price">7.00 <img src="images/SAR.svg" alt="رمز الريال" class="rial"></div>
             </div>
         </div>
+
+
+        <div id="baked-products" data-tab-content class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/m3.jpeg" alt="شاي مغربي">
+                    </div>
+                    <h3>مخبوزات 1</h3>
+                    <p>وصف المخبوزات 1</p>
+                    <div class="price">8.00 <img src="images/SAR.svg" alt="رمز الريال" class="rial"></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image" src="images/m1.jpeg" alt="شاي مغربي">
+                    </div>
+                    <h3>مخبوزات 2</h3>
+                    <p>وصف المخبوزات 2</p>
+                    <div class="price">8.00 <img src="images/SAR.svg" alt="رمز الريال" class="rial"></div>
+                </div>
+        </div>
+
+
+        <div id="cold-products" data-tab-content class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/peach.jpeg" alt="شاي مغربي">
+                    </div>
+                    <h3>مشروب بارد 1</h3>
+                    <p>وصف المشروب البارد 1</p>
+                    <div class="price">8.00 <img src="images/SAR.svg" alt="رمز الريال" class="rial"></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/iceTea.jpeg" alt="شاي مغربي">
+                    </div>
+                    <h3>مشروب بارد 2</h3>
+                    <p>وصف المشروب البارد 2</p>
+                    <div class="price">8.00 <img src="images/SAR.svg" alt="رمز الريال" class="rial"></div>
+                </div>
+        </div>
+
+
+
+        
+
     </main>
     <footer>
         <div class="footer-content">
@@ -64,6 +119,6 @@
             <a href="#" class="social-icon"><img src="images/twitter.svg" alt="تويتر"></a>
         </div>
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 </html>
